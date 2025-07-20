@@ -38,7 +38,6 @@ return {
       "nixd",
       "hyprls",
       "pyright",
-      require("neo.plugins.lsp.gopls"),
       {
         "tailwindcss",
         {

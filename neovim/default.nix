@@ -22,8 +22,6 @@
     prettierd
     taplo
     vtsls
-    gopls
-    golangci-lint
     typos-lsp
     hyprls
     lynx
