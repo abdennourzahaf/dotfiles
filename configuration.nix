@@ -40,7 +40,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.abdennour = {
     isNormalUser = true;
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     packages = with pkgs; [
       brave
       gh
@@ -107,6 +107,8 @@
     enable = true;
     silent = true;
   };
+
+  virtualisation.docker.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
