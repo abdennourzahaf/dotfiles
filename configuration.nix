@@ -98,9 +98,13 @@
 
   programs.nh = {
     enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 7d --keep 3";
     flake = "/home/abdennour/Projects/dotfiles";
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1d";
   };
 
   programs.direnv = {
