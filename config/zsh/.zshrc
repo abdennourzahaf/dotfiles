@@ -96,6 +96,7 @@ gci() { git branch -D task#"$1"; }
 gcoi() { git checkout task#"$1"; }
 gacp() { git add --all && git commit -m "$1" && git push; }
 gacpi() { git add --all && git commit -m "$1" && gpi; }
+gacpim() { git add --all && git commit -m "$1" && gpi && gmpr; }
 gpii() { git push -u origin HEAD && xdg-open "$(gh pr create --fill-first)/files" 1>/dev/null; }
 open_issue() {
   BASE_BRANCH=$2
